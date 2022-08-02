@@ -19,4 +19,9 @@ contract ChrisCanCoin is ERC20 {
 
     }
 
+    function publicMint() public {
+        // Allow anyone on the Ropsten testnet to mint 100 CCC tokens
+        _mint(msg.sender, 100 * (10 ** 18));
+    }
+
 }
